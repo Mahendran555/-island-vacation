@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Explore</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+    </header>
+    <section class="home">
+        
+        <video class="video-slide active" src="./1.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./2.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./3.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./4.mp4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="./5.mp4.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Woderful<br/><span>Island</span></h1>
+            <p>Planning a Greek island vacation This list of top Greek islands, their beaches and activities<br/> will help you choose the best islands for you A weeklong trip on the Island of Hawaii leads to<br/> giant manta rays, waterfalls, sunset dinners, a luxury beachside resort and more Experience<br/> the captivating allure of Corfu’s sun-kissed paradise with these top 10 things to do in Corfu Head to Portugal’s Azores Islands where you’ll discover breathtaking scenery, geological marvels and a rich, old-world-influenced culture.<br/>
+            <button class="button">Get More</button>
+        </div>
+        <div class="content">
+            <h1>Camping<br/><span>Enjoy</span></h1>
+            <p>Planning a Greek island vacation This list of top Greek islands, their beaches and activities<br/> will help you choose the best islands for you A weeklong trip on the Island of Hawaii leads to<br/> giant manta rays, waterfalls, sunset dinners, a luxury beachside resort and more Experience<br/> the captivating allure of Corfu’s sun-kissed paradise with these top 10 things to do in Corfu Head to Portugal’s Azores Islands where you’ll discover breathtaking scenery, geological marvels and a rich, old-world-influenced culture.<br/>
+            <button class="button">Get More</button>
+        </div>
+        <div class="content">
+            <h1>Adventures<br/><span>Off Road</span></h1>
+            <p>Planning a Greek island vacation This list of top Greek islands, their beaches and activities<br/> will help you choose the best islands for you A weeklong trip on the Island of Hawaii leads to<br/> giant manta rays, waterfalls, sunset dinners, a luxury beachside resort and more Experience<br/> the captivating allure of Corfu’s sun-kissed paradise with these top 10 things to do in Corfu Head to Portugal’s Azores Islands where you’ll discover breathtaking scenery, geological marvels and a rich, old-world-influenced culture.<br/>
+            <button class="button">Get More</button>
+        </div>
+        <div class="content">
+            <h1>Mountains trees<br/><span>forest</span></h1>
+            <p>Planning a Greek island vacation This list of top Greek islands, their beaches and activities<br/> will help you choose the best islands for you A weeklong trip on the Island of Hawaii leads to<br/> giant manta rays, waterfalls, sunset dinners, a luxury beachside resort and more Experience<br/> the captivating allure of Corfu’s sun-kissed paradise with these top 10 things to do in Corfu Head to Portugal’s Azores Islands where you’ll discover breathtaking scenery, geological marvels and a rich, old-world-influenced culture.<br/>
+            <button class="button">Get More</button>
+        </div>
+        <div class="content">
+            <h1>Road Trip<br/><span>Together</span></h1>
+            <p>Planning a Greek island vacation This list of top Greek islands, their beaches and activities<br/> will help you choose the best islands for you A weeklong trip on the Island of Hawaii leads to<br/> giant manta rays, waterfalls, sunset dinners, a luxury beachside resort and more Experience<br/> the captivating allure of Corfu’s sun-kissed paradise with these top 10 things to do in Corfu Head to Portugal’s Azores Islands where you’ll discover breathtaking scenery, geological marvels and a rich, old-world-influenced culture.<br/>
+            <button class="button">Get More</button>
+        </div>
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        menuBtn.addEventListener("click",() =>{
+            menuBtn.classList.toggle("active");
+        });
+
+
+
+
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            });
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            })
+        })
+    </script>
+</body>
+</html>
